@@ -2,7 +2,7 @@
 
 ---
 
-Example [Nuxt] website using GitLab Pages.
+Just a profile page from Beautheme.com
 
 Learn more about GitLab Pages at https://pages.gitlab.io and the official
 documentation https://docs.gitlab.com/ce/user/project/pages/.
