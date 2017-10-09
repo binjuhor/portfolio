@@ -1,14 +1,14 @@
 {
-  "name": "nuxt-gitlab-pages",
+  "name": "binjuhor-beautheme-profile",
   "version": "1.0.0",
-  "description": "Nuxt example for Gitlab Pages",
+  "description": "Binjuhor Beautheme Profile",
   "author": {
-    "name": "Alexandre Villeneuve",
-    "email": "haleksviller@gmail.com"
+    "name": "Binjuhor",
+    "email": "binjuhor@gmail.com"
   },
   "private": true,
   "dependencies": {
-    "nuxt": "latest"
+    "nuxt": "^1.0.0-rc11"
   },
   "scripts": {
     "dev": "nuxt",
