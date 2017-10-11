@@ -1,8 +1,8 @@
-![Build Status](https://gitlab.com/pages/nuxt/badges/master/build.svg)
+![Build Status](https://gitlab.com/pages/plain-html/badges/master/build.svg)
 
 ---
 
-Binjuhor profile page from Beautheme.com
+Running under binjuhor.beautheme.com.
 
 Learn more about GitLab Pages at https://pages.gitlab.io and the official
 documentation https://docs.gitlab.com/ce/user/project/pages/.
@@ -14,9 +14,9 @@ documentation https://docs.gitlab.com/ce/user/project/pages/.
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [GitLab CI](#gitlab-ci)
-- [Building locally](#building-locally)
 - [GitLab User or Group Pages](#gitlab-user-or-group-pages)
 - [Did you fork this project?](#did-you-fork-this-project)
+- [Troubleshooting](#troubleshooting)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -25,36 +25,21 @@ documentation https://docs.gitlab.com/ce/user/project/pages/.
 This project's static Pages are built by [GitLab CI][ci], following the steps
 defined in [`.gitlab-ci.yml`](.gitlab-ci.yml):
 
-```yml
-image: node
-
-before_script:
-  - npm install
-
-cache:
-  paths:
-    - node_modules/
+```
+image: alpine:latest
 
 pages:
+  stage: deploy
   script:
-    - npm run generate
+  - echo 'Nothing to do...'
   artifacts:
     paths:
-      - public
+    - public
   only:
-    - master
+  - master
 ```
 
-## Building locally
-
-To work locally with this project, you'll have to follow the steps below:
-
-1. Fork, clone or download this project
-1. [Install] Nuxt
-1. Generate and preview the website with hot-reloading: `npm run dev` or `nuxt`
-1. Add content
-
-Read more at Nuxt's [documentation].
+The above example expects to put all your HTML files in the `public/` directory.
 
 ## GitLab User or Group Pages
 
@@ -62,14 +47,6 @@ To use this project as your user/group website, you will need one additional
 step: just rename your project to `namespace.gitlab.io`, where `namespace` is
 your `username` or `groupname`. This can be done by navigating to your
 project's **Settings**.
-
-Also, please remove the entry containing the baseurl of your site on the file `nuxt.config.js`:
-
-```javascript
-router: {
-  base: '/nuxt/'
-},
-```
 
 Read more about [user/group Pages][userpages] and [project Pages][projpages].
 
@@ -79,13 +56,12 @@ If you forked this project for your own use, please go to your project's
 **Settings** and remove the forking relationship, which won't be necessary
 unless you want to contribute back to the upstream project.
 
+## Troubleshooting
+
+1. CSS is missing! That means that you have wrongly set up the CSS URL in your
+   HTML files. Have a look at the [index.html] for an example.
+
 [ci]: https://about.gitlab.com/gitlab-ci/
-[Nuxt]: https://nuxtjs.org/
-[install]: https://nuxtjs.org/guide/installation/
-[documentation]: https://nuxtjs.org/guide
+[index.html]: https://gitlab.com/pages/plain-html/blob/master/public/index.html
 [userpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#user-or-group-pages
 [projpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#project-pages
-
-----
-
-Forked from @haleksandre

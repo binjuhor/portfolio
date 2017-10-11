@@ -1,17 +1,11 @@
-image: node
-
-before_script:
-  - npm install
-
-cache:
-  paths:
-    - node_modules/
+image: alpine:latest
 
 pages:
+  stage: deploy
   script:
-    - npm run generate
+  - echo 'Nothing to do...'
   artifacts:
     paths:
-      - public
+    - public
   only:
-    - master
+  - master
