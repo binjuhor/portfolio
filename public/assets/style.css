@@ -39,5 +39,19 @@ a {
 .social-item {
   display: inline-block;
   margin: 5px; }
+  .social-item.skype {
+    color: #00aff0; }
+  .social-item.twitter {
+    color: #1da1f2; }
+  .social-item.linkedin {
+    color: #0077b5; }
+  .social-item.facebook {
+    color: #3b5998; }
+  .social-item.github {
+    color: #4078c0; }
+  .social-item.gitlab {
+    color: #fc6d26; }
+  .social-item.paypal {
+    color: #003087; }
 
 /*# sourceMappingURL=style.css.map */
