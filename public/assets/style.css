@@ -1,19 +1,27 @@
 button:hover, a:hover {
   opacity: 0.7; }
 
+body {
+  margin: 0;
+  padding: 0; }
+
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto; }
 
 .card {
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  width: 100%;
+  height: auto;
   margin: auto;
   text-align: center;
-  position: relative;
-  margin-top: 5%; }
+  position: relative; }
 
+@media screen and (min-width: 420px) {
+  .card {
+    margin-top: 5%;
+    max-width: 300px;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); } }
 .title {
   color: grey;
   font-size: 18px; }
