@@ -95,4 +95,40 @@ a {
     &.pinterest {
         color: #bd081c;
     }
+    &.behance{
+        color: #1769ff;
+    }
+    &.freelancer, &.themeforest{
+        margin:0px;
+    }
+}
+
+.bin{
+    &::before{
+        content:"";
+        position: relative;
+        top: 2px;
+        width: 25px;
+        height: 25px;
+        background: url(../images/multiple-logo.png);
+        background-repeat: no-repeat;
+        background-position-y: 2px;
+        background-size: 78px;
+        display: inline-block;
+    }
+    &.bin-envato{
+        &::before{
+            background-position-x: 0px;
+        }
+    }
+    &.bin-freelancer{
+        &::before{
+            background-position-x: -25px;
+        }
+    }
+    &.bin-upwork{
+        &::before{
+            background-position-x: -50px;
+        }
+    }
 }
