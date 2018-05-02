@@ -66,7 +66,8 @@ a {
     color: #bd081c; }
   .social-item.behance {
     color: #1769ff; }
-  .social-item.freelancer, .social-item.themeforest {
+  .social-item.freelancer,
+  .social-item.themeforest .social-item.upwork {
     margin: 0px; }
 
 .bin::before {

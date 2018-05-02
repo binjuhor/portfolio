@@ -98,7 +98,9 @@ a {
     &.behance{
         color: #1769ff;
     }
-    &.freelancer, &.themeforest{
+    &.freelancer,
+    &.themeforest
+    &.upwork{
         margin:0px;
     }
 }
